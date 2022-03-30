@@ -1,0 +1,26 @@
+@function calculate-rem($size) {
+  $rem-size: calc($size / 16);
+  @return $rem-size * 1rem;
+}
+
+@mixin fontfamily($family, $weight) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+}
+
+@mixin fontsize($size) {
+  font-size: ($size * 1px);
+  font-size: calculate-rem($size);
+}
+
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: ($breakpoint * 1px)) {
+    @content;
+  }
+}
+
+@mixin respond-min-width($breakpoint) {
+  @media only screen and (min-width: ($breakpoint * 1px)) {
+    @content;
+  }
+}

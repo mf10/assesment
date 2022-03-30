@@ -1,0 +1,6 @@
+@use '../scss/variables' as variable;
+
+body {
+  font-family: 'Open Sans', 'Source Sans Pro', 'Nato Sans', Helvetica, sans-serif;
+  background-color: variable.$white;
+}

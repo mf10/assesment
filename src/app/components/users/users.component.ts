@@ -13,7 +13,6 @@ import { User } from 'src/app/models/user';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsersComponent implements OnInit {
-  // public usersList$ = this.store.select(selectAllUsers);
   constructor(private store: Store<AppState>, private modalService: NgbModal) {}
   public usersList$ = this.store.select(selectAllUsers);
   public todo = '';
@@ -21,8 +20,11 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(loadUsers());
   }
-
-  public async openModal(user: User): Promise<void> {
+  onDoubleClick(string) {
+    console.log(string);
+    alert('Double click!');
+  }
+ openModal(user: User){
     let modalRef: NgbModalRef;
 
     modalRef = this.modalService.open(EditUserComponent, {

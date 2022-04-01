@@ -4,10 +4,14 @@
 .users-container {
   padding: 30px 0px;
   .card{
-
+    min-width: 185px;
   .card-title {
     background-color: variable.$blue-light;
     text-decoration: none;
+    h3{
+      @include mixin.fontsize(20);
+    }
+
   }
   .user-details {
 

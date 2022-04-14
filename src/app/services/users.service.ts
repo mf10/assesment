@@ -15,6 +15,6 @@ export class UsersService {
    * @returns users
    */
   public getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.userData}/usersMockResposne.json`);
+    return this.http.get<User[]>(`${this.userData}/usersMockResponse.json`);
   }
 }
